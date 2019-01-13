@@ -2,10 +2,10 @@
 'use strict';
 
 
-var Machine = /* module */[];
-
 var Service = /* module */[];
 
-exports.Machine = Machine;
+var Machine = /* module */[];
+
 exports.Service = Service;
+exports.Machine = Machine;
 /* No side effect */

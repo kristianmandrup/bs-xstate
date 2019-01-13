@@ -1,6 +1,3 @@
-module Machine = {
-  type t('a) = {transition: ('a, string) => t('a)};
-};
 module Service = {
   type t('a) = {
     onTransition: 'a => unit,
@@ -8,7 +5,10 @@ module Service = {
     send: string => unit,
   };
 };
+module Machine = {
+  [@bs.module "xstate/lib/interpreter"]
+  external interpret: 'a => Service.t('a) = "";
+  type t('a) = {transition: ('a, string) => t('a)};
+};
 /* link to exported of machine.js */
 [@bs.module "xstate"] external machine: 'a => Machine.t('a) = "";
-[@bs.module "xstate/lib/interpreter"]
-external interpret: Machine.t('a) => Service.t('a) = "";
