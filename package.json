@@ -8,11 +8,23 @@
     "watch": "bsb -make-world -w"
   },
   "keywords": [
-    "BuckleScript"
+    "BuckleScript",
+    "ReasonML",
+    "xstate",
+    "state",
+    "management",
+    "diagram"
   ],
-  "author": "",
+  "files": [
+    "src/XState.re",
+    "bsconfig.json"
+  ],
+  "author": "Kristian Mandrup <kmandrup@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "bs-platform": "^4.0.18"
+  },
+  "dependencies": {
+    "xstate": "^4.2.3"
   }
 }
