@@ -9,5 +9,6 @@ module Service = {
   };
 };
 /* link to exported of machine.js */
-[@bs.send] external machine: 'a => Machine.t('a) = "";
-[@bs.send] external interpret: Machine.t('a) => Service.t('a) = "";
+[@bs.module "xstate"] external machine: 'a => Machine.t('a) = "";
+[@bs.module "xstate/lib/interpreter"]
+external interpret: Machine.t('a) => Service.t('a) = "";
