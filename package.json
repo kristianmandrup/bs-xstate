@@ -1,5 +1,6 @@
 {
   "name": "bs-xstate",
+  "description": "Bucklescript bindings for XState state machine",
   "version": "0.1.0",
   "scripts": {
     "clean": "bsb -clean-world",
